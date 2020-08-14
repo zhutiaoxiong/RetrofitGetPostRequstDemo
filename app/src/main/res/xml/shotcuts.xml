@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shotcuts xmlns:android="http://schemas.android.com/apk/res/android">
+        <shortcut
+            android:shortcutId="compose"
+            android:enabled="true"
+            android:icon="@mipmap/ic_launcher"
+            android:shortcutShortLabel="@string/app_name1"
+            android:shortcutLongLabel="@string/app_name2"
+            android:shortcutDisabledMessage="@string/app_name3">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.example.maintest"
+                android:targetClass="com.example.maintest.TwoActivity"/>
+            <!-- 如果你的快捷方式与多个意图相关联，请将它们添加到这里，列表中的最后一个意图决定了用户最先看到的内容。
+             如果你的快捷方式与多个意图相关联，系统将在资源文件中启动与该快捷方式的最后一个意图相对应的活动，
+             并在后方堆栈中执行其他活动 。在这种情况下，当用户选择快捷方式然后按下后退键时，您的应用程序将启
+             动与资源文件中列出的快捷方式的倒数第二个意向对应的活动。这种行为模式会一直重复按下后退按钮，直
+             到用户清除快捷方式创建的后台堆栈。当用户下一次按下后退按钮时，系统将其导航回启动器。-->
+            <categories android:name="android.shortcut.conversation"/>
+        </shortcut>
+</shotcuts>
